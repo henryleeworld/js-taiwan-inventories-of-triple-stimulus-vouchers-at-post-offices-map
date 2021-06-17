@@ -11,9 +11,10 @@ var localizationArray = {
     "busiTime": "營業時間",
     "busiMemo": "營業備註",
     "longitude": "經度",
+    "lowLine": "服務量低標",
     "latitude": "緯度",
-    "total": "存量",
-    "updateDate": "異動日期"
+    "total": "服務量",
+    "updateTime": "異動時間"
 };
 var sidebar = new ol.control.Sidebar({
     element: 'sidebar',
@@ -63,7 +64,6 @@ var size = ol.extent.getWidth(projectionExtent) / 256;
 var resolutions = new Array(20);
 var matrixIds = new Array(20);
 for (var z = 0; z < 20; ++z) {
-    // generate resolutions and matrixIds arrays for this WMTS
     resolutions[z] = size / Math.pow(2, z);
     matrixIds[z] = z;
 }
@@ -226,13 +226,13 @@ function pointStyleFunction(f) {
     if (p.updated === '') {
         color = '#ccc';
     } else if (p.mask_adult > 100 && p.mask_child > 25) {
-        color = '#48c774'; // > 50% stock
+        color = '#48c774';
     } else if (p.mask_adult > 40 && p.mask_child > 10) {
-        color = '#ffdd57'; // > 20% stock
+        color = '#ffdd57';
     } else if (p.mask_adult > 20 && p.mask_child > 5) {
-        color = '#fc82b1'; // > 10% stock
+        color = '#fc82b1';
     } else {
-        color = '#f00'; // < 10% stock, treat as 0
+        color = '#f00';
     }
     return new ol.style.Style({
         image: new ol.style.RegularShape({

@@ -11,8 +11,8 @@ $ git clone
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/UNcBNsC.png)
+![](https://i.imgur.com/eIocFp4.png)
 > 可查詢到住家附近郵局，就近購買振興三倍券
 
-![](https://i.imgur.com/8h9zbmm.png)
+![](https://i.imgur.com/9tV5nHf.png)
 > 自 109 年 7 月 15 日至 109 年 12 月 31 日止，領有全民健保卡者，應持健保卡；未領有健保卡者，應攜帶國民身分證、經外交部認定之證件或居留證等身分證明文件，並攜帶 1,000元 至郵局領取
